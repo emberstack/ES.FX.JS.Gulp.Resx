@@ -1,0 +1,45 @@
+{
+  "name": "gulp-resx-convert",
+  "private": true,
+  "version": "1.0.0",
+  "description": "A .resx file converter for gulp. Supports multiple output formats, including JSON, Typescript and C# constants class",
+  "keywords": [
+    "gulp",
+    "resx",
+    "convert",
+    "json",
+    "typescript",
+    "typings",
+    "EmberStack"
+  ],
+  "license": "MIT",
+  "author": "Romeo Dumitrescu <winromulus@users.noreply.github.com> (https://github.com/EmberStack)",
+  "homepage": "https://github.com/EmberStack/ES.FX.JS.Gulp.Resx",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/EmberStack/ES.FX.JS.Gulp.Resx.git"
+  },
+  "bugs": {
+    "url": "https://github.com/EmberStack/ES.FX.JS.Gulp.Resx/issues"
+  },
+  "main": "gulp-resx-convert.js",
+  "types": "gulp-resx-convert.d.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "postinstall": "gulp ProjectBeforeBuild",
+    "Package": "gulp package --version "
+  },
+  "devDependencies": {
+    "gulp": "*",
+    "gulp-watch": "*",
+    "gulp-rename": "*",
+    "gulp-json-editor": "*"
+  },
+  "dependencies": {
+    "os": "0.1.1",
+    "gulp-util": "3.0.8",
+    "through2": "2.0.3",
+    "path": "0.12.7",
+    "xml2js": "0.4.19"
+  }
+}

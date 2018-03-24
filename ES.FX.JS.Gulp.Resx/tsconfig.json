@@ -1,0 +1,23 @@
+{
+  "compileOnSave": true,
+  "compilerOptions": {
+    "noImplicitAny": false,
+    "noEmitOnError": true,
+    "removeComments": false,
+    "sourceMap": true,
+    "declaration": true,
+    "target": "es5",
+    "module": "AMD",
+    "outFile": "gulp-resx-convert.js",
+    "typeRoots": [
+      "node_modules/@types"
+    ],
+    "stripInternal": true
+  },
+  "exclude": [
+    "node_modules",
+    "!node_modules/@types",
+    "Test",
+    "gulp-resx-convert.d.ts"
+  ]
+}
