@@ -1,24 +1,21 @@
-﻿# gulp-resx-convert - Overview [![NPM version][npm-image]][npm-url]
-> A .resx file converter for gulp. Supports multiple output formats, including JSON, Typescript and C# constants class
+﻿[package-url]:   https://npmjs.org/package/gulp-resx-convert
+[package-image]: https://badge.fury.io/js/gulp-resx-convert.svg
+[build-url]:     https://sintari.visualstudio.com/ES.FX
+[build-image]:   https://sintari.visualstudio.com/_apis/public/build/definitions/34e057ec-f09f-4d30-92f4-5895eeaa3f74/12/badge
+[wiki-url]:      https://github.com/EmberStack/ES.FX.JS.Gulp.Resx/wiki
 
-## Packages & Status
-EmberStack Frameworks contain multiple packages. For information about each package please follow the links
-
----
-Package  | Build status | npm 
--------- | :------------ | :------------ 
-gulp-resx-convert | [![VSTS](https://sintari.visualstudio.com/_apis/public/build/definitions/34e057ec-f09f-4d30-92f4-5895eeaa3f74/12/badge)](https://sintari.visualstudio.com/ES.FX) |  [![NPM version][npm-image]][npm-url]
+# gulp-resx-convert [![build][build-image]][build-url] [![package][package-image]][package-url]
+A .resx file converter for gulp. Supports multiple output formats, including JSON, Typescript and C# constants class
 
 
 ## Installation
-
 Add this module as a development dependency:
 ```shell
 npm install --save-dev gulp-resx-convert
 ```
 
-## Usage
 
+## Usage
 This gulp plugin supports converting .resx files to multiple file types.
 
 ```javascript
@@ -60,7 +57,7 @@ gulp.task("test", function () {
 ```
 
 
-## Types from Resx
+### Types from Resx
 To specify the type to use in output instead of a string, use the Comment property in the .resx file to describe the type as in the followin example:
 ```javascript
 {"csharp":"int", "typescript":"number", "raw":true}
@@ -73,5 +70,6 @@ Setting the raw value to true means that the converter will output the value dir
 This plugin does not handle scenarios where file names contain spaces or invalid characters.
 Please use gulp-rename before converting the files.
 
-[npm-url]: https://npmjs.org/package/gulp-resx-convert
-[npm-image]: https://badge.fury.io/js/gulp-resx-convert.svg
+
+## Documentation
+Additional documentation may be found in the [Project Wiki][wiki-url]

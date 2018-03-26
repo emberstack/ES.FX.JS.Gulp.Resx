@@ -1,0 +1,41 @@
+name: $(Build.Number.Major).$(Date:yy)$(DayOfYear).$(Rev:r)
+
+trigger:
+  branches:
+    include:
+      - '*'
+      
+pool:
+  vmImage: 'vs2017-win2016'
+
+variables:
+  buildPlatform: 'Any CPU'
+  buildConfiguration: 'Release'
+
+steps:
+- task: NuGetToolInstaller@0
+  displayName: 'Use NuGet 4.3.0'
+  
+- task: NuGetCommand@2
+  displayName: 'NuGet restore'
+  
+- task: VSBuild@1
+  displayName: 'Build solution **\*.sln'
+  inputs:
+    msbuildArgs: '/p:AssemblyVersion=$(Build.BuildNumber).0 /p:Version=$(Build.BuildNumber)
+    platform: '$(BuildPlatform)'
+    configuration: '$(BuildConfiguration)'
+    
+- task: Npm@1
+  displayName: 'npm Package ES.FX.JS.Gulp.Resx'
+  inputs:
+    command: custom
+    workingDir: ES.FX.JS.Gulp.Resx
+    verbose: false
+    customCommand: 'run Package $(Build.BuildNumber)'
+
+- task: PublishBuildArtifacts@1
+  displayName: 'Publish artifact npm-package'
+  inputs:
+    PathtoPublish: 'npm-Publish'
+    ArtifactName: 'npm-package/'
