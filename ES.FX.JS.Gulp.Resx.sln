@@ -5,7 +5,7 @@ VisualStudioVersion = 15.0.27004.2008
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ES.FX.JS.Gulp.Resx", "ES.FX.JS.Gulp.Resx\ES.FX.JS.Gulp.Resx.csproj", "{C74E6629-03E9-4C4B-8AFA-F5E24FF63231}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Files", "Files", "{D2B24548-E37A-4FC8-B3DF-F9E6E34DF136}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{72E32068-ABC8-4CC8-B21D-134854E532F7}"
 	ProjectSection(SolutionItems) = preProject
 		.gitignore = .gitignore
 		LICENSE = LICENSE
