@@ -9,7 +9,6 @@ pool:
   vmImage: 'vs2017-win2016'
 
 variables:
-  buildPlatform: 'Any CPU'
   buildConfiguration: 'Release'
 
 steps:
@@ -23,7 +22,7 @@ steps:
   displayName: 'Build solution **\*.sln'
   inputs:
     msbuildArgs: '/p:AssemblyVersion=$(Build.BuildNumber).0 /p:Version=$(Build.BuildNumber)
-    platform: '$(buildPlatform)'
+    platform: 'Any CPU'
     configuration: '$(buildConfiguration)'
     
 - task: Npm@1
